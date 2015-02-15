@@ -20,5 +20,6 @@
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) Venue *venue;
 @property (strong, atomic) UIImage *imgIcon;
+@property (atomic) BOOL downloadingImage;
 
 @end

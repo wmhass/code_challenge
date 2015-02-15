@@ -39,8 +39,6 @@ static const NSString *kData = @"data";
             [self.delegate performSelector:@selector(requestDidFailWithError:) withObject:error];
         }
         
-        NSLog(@"Error: %@",error.description);
-        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         }];

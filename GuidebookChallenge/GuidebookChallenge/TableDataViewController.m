@@ -8,7 +8,7 @@
 
 #import "TableDataViewController.h"
 #import "GuideTableViewCell.h"
-
+#import "AFNetworking.h"
 @interface TableDataViewController () {
     GuidebookRequest *gbRequest;
 }
@@ -79,10 +79,11 @@ static NSString *SettingsSegueIdentifier = @"settings_segue";
                                  [self.dateFormatter stringFromDate:g.endDate]];
     
     if(g.imgIcon) {
-        cell.imageView.image = g.imgIcon;
+        //cell.imageView.image = g.imgIcon;
+        cell.imgViewIcon.image = g.imgIcon;
         [cell.loader stopAnimating];
     } else {
-        cell.imageView.image = nil;
+        cell.imgViewIcon.image = nil;
         [cell.loader startAnimating];
     }
     
@@ -93,8 +94,23 @@ static NSString *SettingsSegueIdentifier = @"settings_segue";
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    Guide *g = self.tableData[indexPath.row];
+    if(!g.imgIcon && g.icon && !g.downloadingImage) {
+        g.downloadingImage = YES;
+        NSURLRequest *request = [NSURLRequest requestWithURL:g.icon];
+        AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        op.responseSerializer = [AFImageResponseSerializer serializer];
+        [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            g.imgIcon = responseObject;
+            [tableView reloadRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationNone];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+        }];
+        [op start];
+    }
 }
 
 #pragma mark - GuidebookRequestDelegate
