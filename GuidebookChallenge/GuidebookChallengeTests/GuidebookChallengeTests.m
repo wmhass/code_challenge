@@ -31,14 +31,6 @@
     XCTAssert(YES, @"Pass");
 }
 
-- (void)testRequest {
-    
-    GuidebookRequest *request = [[GuidebookRequest alloc] init];
-    [request setDelegate:self];
-    
-    [request requestData];
-}
-
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
