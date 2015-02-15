@@ -1,0 +1,10 @@
+/* 
+  Localized.strings
+  GuidebookChallenge
+
+  Created by William Hass on 2/15/15.
+  Copyright (c) 2015 LiloHass. All rights reserved.
+*/
+"request_error_msg" = "An error occurred and we can't load the data :(";
+
+"ok_button_title" = "Ok";

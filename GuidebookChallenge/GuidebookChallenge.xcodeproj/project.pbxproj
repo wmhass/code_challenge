@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F7B451A1A903355007AE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B45191A903355007AE1A6 /* main.m */; };
 		0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451C1A903355007AE1A6 /* AppDelegate.m */; };
-		0F7B45201A903355007AE1A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451F1A903355007AE1A6 /* ViewController.m */; };
+		0F7B45201A903355007AE1A6 /* TableDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451F1A903355007AE1A6 /* TableDataViewController.m */; };
 		0F7B45231A903355007AE1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B45211A903355007AE1A6 /* Main.storyboard */; };
 		0F7B45251A903355007AE1A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B45241A903355007AE1A6 /* Images.xcassets */; };
 		0F7B45281A903355007AE1A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B45261A903355007AE1A6 /* LaunchScreen.xib */; };
@@ -18,6 +18,7 @@
 		0F87BA571A905EF60054DA30 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA561A905EF60054DA30 /* Guide.m */; };
 		0F87BA5A1A90646E0054DA30 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA591A90646E0054DA30 /* Venue.m */; };
 		0F87BA5E1A9069160054DA30 /* ObjectFromJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA5D1A9069160054DA30 /* ObjectFromJSON.m */; };
+		0F87BA601A908ED00054DA30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F87BA5F1A908ED00054DA30 /* Localizable.strings */; };
 		C143ABC820ED0C32595F82D0 /* libPods-GuidebookChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2D03586C860D1AA8D7293D /* libPods-GuidebookChallenge.a */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,8 @@
 		0F7B45191A903355007AE1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F7B451B1A903355007AE1A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F7B451C1A903355007AE1A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0F7B451E1A903355007AE1A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0F7B451F1A903355007AE1A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F7B451E1A903355007AE1A6 /* TableDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataViewController.h; sourceTree = "<group>"; };
+		0F7B451F1A903355007AE1A6 /* TableDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataViewController.m; sourceTree = "<group>"; };
 		0F7B45221A903355007AE1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F7B45241A903355007AE1A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0F7B45271A903355007AE1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		0F87BA591A90646E0054DA30 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		0F87BA5C1A9069160054DA30 /* ObjectFromJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFromJSON.h; sourceTree = "<group>"; };
 		0F87BA5D1A9069160054DA30 /* ObjectFromJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFromJSON.m; sourceTree = "<group>"; };
+		0F87BA5F1A908ED00054DA30 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6F2D03586C860D1AA8D7293D /* libPods-GuidebookChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuidebookChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB823FF92D326B294F4380D /* Pods-GuidebookChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidebookChallenge.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GuidebookChallenge/Pods-GuidebookChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1CDD3AAC14DADCF2F30395 /* Pods-GuidebookChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidebookChallenge.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GuidebookChallenge/Pods-GuidebookChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,8 +106,8 @@
 				0F87BA4F1A9041090054DA30 /* Classes */,
 				0F7B451B1A903355007AE1A6 /* AppDelegate.h */,
 				0F7B451C1A903355007AE1A6 /* AppDelegate.m */,
-				0F7B451E1A903355007AE1A6 /* ViewController.h */,
-				0F7B451F1A903355007AE1A6 /* ViewController.m */,
+				0F7B451E1A903355007AE1A6 /* TableDataViewController.h */,
+				0F7B451F1A903355007AE1A6 /* TableDataViewController.m */,
 				0F7B45211A903355007AE1A6 /* Main.storyboard */,
 				0F7B45241A903355007AE1A6 /* Images.xcassets */,
 				0F7B45261A903355007AE1A6 /* LaunchScreen.xib */,
@@ -119,6 +121,7 @@
 			children = (
 				0F7B45181A903355007AE1A6 /* Info.plist */,
 				0F7B45191A903355007AE1A6 /* main.m */,
+				0F87BA5F1A908ED00054DA30 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F87BA601A908ED00054DA30 /* Localizable.strings in Resources */,
 				0F7B45231A903355007AE1A6 /* Main.storyboard in Resources */,
 				0F7B45281A903355007AE1A6 /* LaunchScreen.xib in Resources */,
 				0F7B45251A903355007AE1A6 /* Images.xcassets in Resources */,
@@ -315,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F87BA5E1A9069160054DA30 /* ObjectFromJSON.m in Sources */,
-				0F7B45201A903355007AE1A6 /* ViewController.m in Sources */,
+				0F7B45201A903355007AE1A6 /* TableDataViewController.m in Sources */,
 				0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */,
 				0F87BA571A905EF60054DA30 /* Guide.m in Sources */,
 				0F87BA5A1A90646E0054DA30 /* Venue.m in Sources */,
