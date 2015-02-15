@@ -7,6 +7,7 @@
 //
 
 #import "TableDataViewController.h"
+#import "GuideTableViewCell.h"
 
 @interface TableDataViewController () {
     GuidebookRequest *gbRequest;
@@ -41,15 +42,9 @@
     return self.tableData.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (GuideTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellIdentifier];
-        
-    }
+    GuideTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     // name, city, state, start date, and end date.
     
