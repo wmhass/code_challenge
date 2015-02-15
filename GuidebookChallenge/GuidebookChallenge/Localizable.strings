@@ -8,3 +8,7 @@
 "request_error_msg" = "An error occurred and we can't load the data :(";
 
 "ok_button_title" = "Ok";
+
+"close_button_title" = "Close";
+
+"alert_settings_title" = "Settings";

@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		0F3849CE1A909B4600F5D235 /* GuideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849CD1A909B4600F5D235 /* GuideTableViewCell.m */; };
 		0F3849D11A90A16200F5D235 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849D01A90A16200F5D235 /* MainNavigationController.m */; };
+		0F3849DC1A910B1200F5D235 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DA1A910B1200F5D235 /* logo@3x.png */; };
+		0F3849DD1A910B1200F5D235 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DB1A910B1200F5D235 /* logo@2x.png */; };
+		0F3849E21A9146EF00F5D235 /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DE1A9146EF00F5D235 /* loading@2x.png */; };
+		0F3849E31A9146EF00F5D235 /* loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DF1A9146EF00F5D235 /* loading@3x.png */; };
+		0F3849E41A9146EF00F5D235 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849E01A9146EF00F5D235 /* settings@2x.png */; };
+		0F3849E51A9146EF00F5D235 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849E11A9146EF00F5D235 /* settings@3x.png */; };
+		0F3849E81A914BE000F5D235 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849E71A914BE000F5D235 /* SettingsViewController.m */; };
+		0F3849EB1A91502700F5D235 /* UserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849EA1A91502700F5D235 /* UserDefaultsHelper.m */; };
 		0F7B451A1A903355007AE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B45191A903355007AE1A6 /* main.m */; };
 		0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451C1A903355007AE1A6 /* AppDelegate.m */; };
 		0F7B45201A903355007AE1A6 /* TableDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451F1A903355007AE1A6 /* TableDataViewController.m */; };
@@ -39,6 +47,16 @@
 		0F3849CD1A909B4600F5D235 /* GuideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTableViewCell.m; sourceTree = "<group>"; };
 		0F3849CF1A90A16200F5D235 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		0F3849D01A90A16200F5D235 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		0F3849DA1A910B1200F5D235 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		0F3849DB1A910B1200F5D235 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		0F3849DE1A9146EF00F5D235 /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
+		0F3849DF1A9146EF00F5D235 /* loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@3x.png"; sourceTree = "<group>"; };
+		0F3849E01A9146EF00F5D235 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		0F3849E11A9146EF00F5D235 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
+		0F3849E61A914BE000F5D235 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0F3849E71A914BE000F5D235 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		0F3849E91A91502700F5D235 /* UserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsHelper.h; sourceTree = "<group>"; };
+		0F3849EA1A91502700F5D235 /* UserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsHelper.m; sourceTree = "<group>"; };
 		0F7B45141A903355007AE1A6 /* GuidebookChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidebookChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7B45181A903355007AE1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7B45191A903355007AE1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,10 +128,10 @@
 			children = (
 				0F87BA541A905EDC0054DA30 /* Model */,
 				0F87BA4F1A9041090054DA30 /* Classes */,
-				0F7B451B1A903355007AE1A6 /* AppDelegate.h */,
-				0F7B451C1A903355007AE1A6 /* AppDelegate.m */,
 				0F7B451E1A903355007AE1A6 /* TableDataViewController.h */,
 				0F7B451F1A903355007AE1A6 /* TableDataViewController.m */,
+				0F3849E61A914BE000F5D235 /* SettingsViewController.h */,
+				0F3849E71A914BE000F5D235 /* SettingsViewController.m */,
 				0F7B45211A903355007AE1A6 /* Main.storyboard */,
 				0F7B45241A903355007AE1A6 /* Images.xcassets */,
 				0F7B45261A903355007AE1A6 /* LaunchScreen.xib */,
@@ -125,6 +143,14 @@
 		0F7B45171A903355007AE1A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F7B451B1A903355007AE1A6 /* AppDelegate.h */,
+				0F7B451C1A903355007AE1A6 /* AppDelegate.m */,
+				0F3849DE1A9146EF00F5D235 /* loading@2x.png */,
+				0F3849DF1A9146EF00F5D235 /* loading@3x.png */,
+				0F3849E01A9146EF00F5D235 /* settings@2x.png */,
+				0F3849E11A9146EF00F5D235 /* settings@3x.png */,
+				0F3849DA1A910B1200F5D235 /* logo@3x.png */,
+				0F3849DB1A910B1200F5D235 /* logo@2x.png */,
 				0F7B45181A903355007AE1A6 /* Info.plist */,
 				0F7B45191A903355007AE1A6 /* main.m */,
 				0F87BA5F1A908ED00054DA30 /* Localizable.strings */,
@@ -158,6 +184,8 @@
 				0F3849CD1A909B4600F5D235 /* GuideTableViewCell.m */,
 				0F3849CF1A90A16200F5D235 /* MainNavigationController.h */,
 				0F3849D01A90A16200F5D235 /* MainNavigationController.m */,
+				0F3849E91A91502700F5D235 /* UserDefaultsHelper.h */,
+				0F3849EA1A91502700F5D235 /* UserDefaultsHelper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -275,8 +303,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F87BA601A908ED00054DA30 /* Localizable.strings in Resources */,
+				0F3849E41A9146EF00F5D235 /* settings@2x.png in Resources */,
+				0F3849DD1A910B1200F5D235 /* logo@2x.png in Resources */,
+				0F3849E31A9146EF00F5D235 /* loading@3x.png in Resources */,
 				0F7B45231A903355007AE1A6 /* Main.storyboard in Resources */,
 				0F7B45281A903355007AE1A6 /* LaunchScreen.xib in Resources */,
+				0F3849DC1A910B1200F5D235 /* logo@3x.png in Resources */,
+				0F3849E21A9146EF00F5D235 /* loading@2x.png in Resources */,
+				0F3849E51A9146EF00F5D235 /* settings@3x.png in Resources */,
 				0F7B45251A903355007AE1A6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +365,12 @@
 				0F3849CE1A909B4600F5D235 /* GuideTableViewCell.m in Sources */,
 				0F87BA5E1A9069160054DA30 /* ObjectFromJSON.m in Sources */,
 				0F7B45201A903355007AE1A6 /* TableDataViewController.m in Sources */,
+				0F3849EB1A91502700F5D235 /* UserDefaultsHelper.m in Sources */,
 				0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */,
 				0F87BA571A905EF60054DA30 /* Guide.m in Sources */,
 				0F3849D11A90A16200F5D235 /* MainNavigationController.m in Sources */,
 				0F87BA5A1A90646E0054DA30 /* Venue.m in Sources */,
+				0F3849E81A914BE000F5D235 /* SettingsViewController.m in Sources */,
 				0F7B451A1A903355007AE1A6 /* main.m in Sources */,
 				0F87BA521A9041340054DA30 /* GuidebookRequest.m in Sources */,
 			);
