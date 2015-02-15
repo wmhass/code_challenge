@@ -17,7 +17,6 @@
 @implementation TableDataViewController
 
 static NSString *dateFormat = @"M/d/yyyyy";
-static NSString *SettingsSegueIdentifier = @"settings_segue";
 
 - (void)viewDidLoad {
     gbRequest = [[GuidebookRequest alloc] init];
@@ -162,17 +161,4 @@ static NSString *SettingsSegueIdentifier = @"settings_segue";
     [self.tableView reloadData];
     [self loadData];
 }
-
-#pragma mark - SettingsViewControllerDelegate
-- (void)offlineModeChanged {
-    NSLog(@"Changed");
-}
-
-#pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:SettingsSegueIdentifier]) {
-        [(SettingsViewController *)segue.destinationViewController setDelegate:self];
-    }
-}
-
 @end

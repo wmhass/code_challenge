@@ -26,7 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.1)
-  - Realm (= 0.90.5)
+  - Realm
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a

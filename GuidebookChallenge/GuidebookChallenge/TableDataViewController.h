@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GuidebookRequest.h"
-#import "SettingsViewController.h"
 
-@interface TableDataViewController : UITableViewController <GuidebookRequestProtocol, SettingsViewControllerDelegate>
+@interface TableDataViewController : UITableViewController <GuidebookRequestProtocol>
 
 @property (strong, nonatomic) NSArray *tableData;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;

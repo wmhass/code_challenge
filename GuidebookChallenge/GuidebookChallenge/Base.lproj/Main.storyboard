@@ -91,76 +91,11 @@
                                 <action selector="btnReloadToueched:" destination="Uak-Mr-301" id="jhF-Pe-Rm6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="kK6-9I-UfU">
-                            <connections>
-                                <segue destination="LSi-sf-Iah" kind="show" identifier="settings_segue" id="Ce7-PJ-wQ8"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KU-gZ-tWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="754" y="680"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="jVd-dr-Ocz">
-            <objects>
-                <tableViewController title="Settings" id="LSi-sf-Iah" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KvL-v2-8Bz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="HV6-5u-h3z">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nvq-fs-wZw">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nvq-fs-wZw" id="Hx1-7w-DZK">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-iq-MlN">
-                                                    <rect key="frame" x="540" y="6" width="51" height="31"/>
-                                                    <color key="onTintColor" red="0.30196078430000001" green="0.62352941179999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <connections>
-                                                        <action selector="switchChanged:" destination="LSi-sf-Iah" eventType="valueChanged" id="WEg-Ns-wkR"/>
-                                                    </connections>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAw-1F-kSu">
-                                                    <rect key="frame" x="18" y="12" width="98" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Gf6-iq-MlN" firstAttribute="leading" secondItem="Hx1-7w-DZK" secondAttribute="leading" constant="274" id="A1T-zC-Crf"/>
-                                                <constraint firstAttribute="centerY" secondItem="pAw-1F-kSu" secondAttribute="centerY" id="Zob-z4-gc4"/>
-                                                <constraint firstItem="pAw-1F-kSu" firstAttribute="leading" secondItem="Hx1-7w-DZK" secondAttribute="leadingMargin" constant="10" id="aYt-BZ-uwd"/>
-                                                <constraint firstAttribute="centerY" secondItem="Gf6-iq-MlN" secondAttribute="centerY" id="m5i-3x-jPe"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Gf6-iq-MlN" secondAttribute="trailing" constant="3" id="sDz-Pr-wac"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="A1T-zC-Crf"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="LSi-sf-Iah" id="eIK-FL-JdF"/>
-                            <outlet property="delegate" destination="LSi-sf-Iah" id="ey7-4v-cZH"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="switchOffline" destination="Gf6-iq-MlN" id="qWH-eJ-8Lu"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fxN-ao-beE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1548" y="381"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="rBF-qx-uoB">
@@ -183,6 +118,5 @@
     </scenes>
     <resources>
         <image name="loading.png" width="19" height="22"/>
-        <image name="settings.png" width="22" height="22"/>
     </resources>
 </document>

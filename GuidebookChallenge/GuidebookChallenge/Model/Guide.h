@@ -8,6 +8,7 @@
 
 #import "ObjectFromJSON.h"
 #import <UIKit/UIKit.h>
+
 @class Venue;
 @interface Guide : ObjectFromJSON
 
