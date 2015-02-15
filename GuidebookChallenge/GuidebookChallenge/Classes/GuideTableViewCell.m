@@ -26,11 +26,9 @@
 }
 
 - (void)resetLabels {
-    self.lblCity.text = @"";
-    self.lblEndDate.text = @"";
-    self.lblName.text = @"";
-    self.lblStartDate.text = @"";
-    self.lblState.text = @"";
+    self.lblName.text = nil;
+    self.lblCityState.text = nil;
+    self.lblStartEndDate.text = nil;
 }
 
 @end

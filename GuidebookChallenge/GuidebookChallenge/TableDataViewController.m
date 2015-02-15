@@ -16,10 +16,25 @@
 
 @implementation TableDataViewController
 
+static NSString *dateFormat = @"M/d/yyyyy";
+static NSString *SettingsSegueIdentifier = @"settings_segue";
+
 - (void)viewDidLoad {
     gbRequest = [[GuidebookRequest alloc] init];
     gbRequest.delegate = self;
+    
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateFormat:dateFormat];
+    
     [super viewDidLoad];
+    
+    [self loadData];
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+}
+
+- (void)loadData {
+    [self.navigationItem.leftBarButtonItem setEnabled:NO];
     [gbRequest requestData];
 }
 
@@ -49,11 +64,35 @@
     // name, city, state, start date, and end date.
     
     Guide *g = self.tableData[indexPath.row];
-    cell.textLabel.text = g.name;
+    cell.lblName.text = g.name;
+    
+    if(g.venue.city && g.venue.state) {
+        cell.lblCityState.text = [NSString stringWithFormat:@"%@ - %@",g.venue.city,g.venue.state];
+    } else if (g.venue.city && !g.venue.state) {
+        cell.lblCityState.text = [NSString stringWithFormat:@"%@",g.venue.city];
+    } else if (!g.venue.city && g.venue.state) {
+        cell.lblCityState.text = [NSString stringWithFormat:@"%@",g.venue.state];
+    }
+    
+    cell.lblStartEndDate.text = [NSString stringWithFormat:@"%@ - %@",
+                                 [self.dateFormatter stringFromDate:g.startDate],
+                                 [self.dateFormatter stringFromDate:g.endDate]];
+    
+    if(g.imgIcon) {
+        cell.imageView.image = g.imgIcon;
+        [cell.loader stopAnimating];
+    } else {
+        cell.imageView.image = nil;
+        [cell.loader startAnimating];
+    }
+    
     return cell;
 }
 
+
+
 #pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -62,6 +101,7 @@
 
 - (void)requestDidFinish:(NSArray *)objects {
     
+    [self.navigationItem.leftBarButtonItem setEnabled:YES];
     self.tableData = [objects sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         NSDate *dt1 = [(Guide *)obj1 startDate];
         NSDate *dt2 = [(Guide *)obj2 startDate];
@@ -80,6 +120,7 @@
 
 - (void)requestDidFailWithError:(NSError *)error {
     
+    [self.navigationItem.leftBarButtonItem setEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!"
                                                                    message:NSLocalizedString(@"request_error_msg", nil)
                                                             preferredStyle:UIAlertControllerStyleAlert];
@@ -96,6 +137,26 @@
                      completion:^{
                          
                      }];
+}
+
+#pragma mark - IB Actions
+
+- (IBAction)btnReloadToueched:(id)sender {
+    self.tableData = nil;
+    [self.tableView reloadData];
+    [self loadData];
+}
+
+#pragma mark - SettingsViewControllerDelegate
+- (void)offlineModeChanged {
+    NSLog(@"Changed");
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:SettingsSegueIdentifier]) {
+        [(SettingsViewController *)segue.destinationViewController setDelegate:self];
+    }
 }
 
 @end

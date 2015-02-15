@@ -7,7 +7,7 @@
 //
 
 #import "ObjectFromJSON.h"
-
+#import <UIKit/UIKit.h>
 @class Venue;
 @interface Guide : ObjectFromJSON
 
@@ -19,5 +19,6 @@
 @property (strong, nonatomic) NSString *strURL;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) Venue *venue;
+@property (strong, atomic) UIImage *imgIcon;
 
 @end

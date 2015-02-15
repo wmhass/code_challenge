@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "GuidebookRequest.h"
+#import "SettingsViewController.h"
 
-@interface TableDataViewController : UITableViewController <GuidebookRequestProtocol>
+@interface TableDataViewController : UITableViewController <GuidebookRequestProtocol, SettingsViewControllerDelegate>
 
 @property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+
+- (IBAction)btnReloadToueched:(id)sender;
 
 @end
 
