@@ -22,16 +22,29 @@ static const NSString *kData = @"data";
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //NSLog(@"RAW Response: %@",[[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+        
+        NSLog(@"RAW Response: %@",[[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
         NSArray *objects = [self parseResponse:responseObject];
         [self.delegate requestDidFinish:objects];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        }];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         if([self.delegate respondsToSelector:@selector(requestDidFailWithError:)]) {
             [self.delegate performSelector:@selector(requestDidFailWithError:) withObject:error];
         }
+        
+        NSLog(@"Error: %@",error.description);
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        }];
+        
     }];
     [operation start];
 }
@@ -45,7 +58,7 @@ static const NSString *kData = @"data";
         Guide *g = [[Guide alloc] initWithJSONObject:obj];
         [returnData addObject:g];
     }
-    return returnData;
+    return [NSArray arrayWithArray:returnData];
 }
 
 @end
