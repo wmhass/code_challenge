@@ -10,10 +10,10 @@
 
 @interface GuideTableViewCell : UITableViewCell
 
-@property (weak,nonatomic) UILabel *lblName;
-@property (weak,nonatomic) UILabel *lblCity;
-@property (weak,nonatomic) UILabel *lblState;
-@property (weak,nonatomic) UILabel *lblStartDate;
-@property (weak,nonatomic) UILabel *lblEndDate;
+@property (weak,nonatomic) IBOutlet UILabel *lblName;
+@property (weak,nonatomic) IBOutlet UILabel *lblCityState;
+@property (weak,nonatomic) IBOutlet UILabel *lblStartEndDate;
+@property (weak,nonatomic) IBOutlet UIImageView *imgViewIcon;
+@property (weak,nonatomic) IBOutlet UIActivityIndicatorView *loader;
 
 @end
