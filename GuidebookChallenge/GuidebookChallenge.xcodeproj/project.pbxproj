@@ -15,6 +15,9 @@
 		0F7B45281A903355007AE1A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F7B45261A903355007AE1A6 /* LaunchScreen.xib */; };
 		0F7B45341A903355007AE1A6 /* GuidebookChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B45331A903355007AE1A6 /* GuidebookChallengeTests.m */; };
 		0F87BA521A9041340054DA30 /* GuidebookRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA511A9041340054DA30 /* GuidebookRequest.m */; };
+		0F87BA571A905EF60054DA30 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA561A905EF60054DA30 /* Guide.m */; };
+		0F87BA5A1A90646E0054DA30 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA591A90646E0054DA30 /* Venue.m */; };
+		0F87BA5E1A9069160054DA30 /* ObjectFromJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F87BA5D1A9069160054DA30 /* ObjectFromJSON.m */; };
 		C143ABC820ED0C32595F82D0 /* libPods-GuidebookChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2D03586C860D1AA8D7293D /* libPods-GuidebookChallenge.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,12 @@
 		0F7B45331A903355007AE1A6 /* GuidebookChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuidebookChallengeTests.m; sourceTree = "<group>"; };
 		0F87BA501A9041340054DA30 /* GuidebookRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidebookRequest.h; sourceTree = "<group>"; };
 		0F87BA511A9041340054DA30 /* GuidebookRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidebookRequest.m; sourceTree = "<group>"; };
+		0F87BA551A905EF60054DA30 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
+		0F87BA561A905EF60054DA30 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
+		0F87BA581A90646E0054DA30 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		0F87BA591A90646E0054DA30 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		0F87BA5C1A9069160054DA30 /* ObjectFromJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFromJSON.h; sourceTree = "<group>"; };
+		0F87BA5D1A9069160054DA30 /* ObjectFromJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFromJSON.m; sourceTree = "<group>"; };
 		6F2D03586C860D1AA8D7293D /* libPods-GuidebookChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuidebookChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB823FF92D326B294F4380D /* Pods-GuidebookChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidebookChallenge.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GuidebookChallenge/Pods-GuidebookChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1CDD3AAC14DADCF2F30395 /* Pods-GuidebookChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidebookChallenge.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GuidebookChallenge/Pods-GuidebookChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +100,7 @@
 		0F7B45161A903355007AE1A6 /* GuidebookChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0F87BA541A905EDC0054DA30 /* Model */,
 				0F87BA4F1A9041090054DA30 /* Classes */,
 				0F7B451B1A903355007AE1A6 /* AppDelegate.h */,
 				0F7B451C1A903355007AE1A6 /* AppDelegate.m */,
@@ -137,6 +147,19 @@
 				0F87BA511A9041340054DA30 /* GuidebookRequest.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		0F87BA541A905EDC0054DA30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F87BA551A905EF60054DA30 /* Guide.h */,
+				0F87BA561A905EF60054DA30 /* Guide.m */,
+				0F87BA581A90646E0054DA30 /* Venue.h */,
+				0F87BA591A90646E0054DA30 /* Venue.m */,
+				0F87BA5C1A9069160054DA30 /* ObjectFromJSON.h */,
+				0F87BA5D1A9069160054DA30 /* ObjectFromJSON.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		452EF33E492E45CF195BB3CA /* Pods */ = {
@@ -291,8 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F87BA5E1A9069160054DA30 /* ObjectFromJSON.m in Sources */,
 				0F7B45201A903355007AE1A6 /* ViewController.m in Sources */,
 				0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */,
+				0F87BA571A905EF60054DA30 /* Guide.m in Sources */,
+				0F87BA5A1A90646E0054DA30 /* Venue.m in Sources */,
 				0F7B451A1A903355007AE1A6 /* main.m in Sources */,
 				0F87BA521A9041340054DA30 /* GuidebookRequest.m in Sources */,
 			);

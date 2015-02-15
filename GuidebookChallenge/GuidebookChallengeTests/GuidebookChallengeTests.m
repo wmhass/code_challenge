@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "GuidebookRequest.h"
 
-@interface GuidebookChallengeTests : XCTestCase <GuidebookRequestProtocol>
+@interface GuidebookChallengeTests : XCTestCase //<GuidebookRequestProtocol>
 
 @end
 
