@@ -11,6 +11,7 @@
 @implementation GuidebookRequest
 
 static NSString *ServiceURL = @"https://www.guidebook.com/service/v2/upcomingGuides/";
+static const NSString *kData = @"data";
 
 - (void)requestData
 {
@@ -20,15 +21,31 @@ static NSString *ServiceURL = @"https://www.guidebook.com/service/v2/upcomingGui
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Objects: %@", responseObject);
+        //NSLog(@"RAW Response: %@",[[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+        NSArray *objects = [self parseResponse:responseObject];
+        [self.delegate requestDidFinish:objects];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         if([self.delegate respondsToSelector:@selector(requestDidFailWithError:)]) {
             [self.delegate performSelector:@selector(requestDidFailWithError:) withObject:error];
         }
     }];
     [operation start];
+}
+
+- (NSArray *)parseResponse:(NSDictionary *)jsonObject {
+    
+    NSArray *data = jsonObject[kData];
+    NSMutableArray *returnData = [[NSMutableArray alloc] initWithCapacity:data.count];
+    for (NSDictionary *obj in data) {
+        
+        Guide *g = [[Guide alloc] initWithJSONObject:obj];
+        [returnData addObject:g];
+    }
+    return returnData;
 }
 
 @end

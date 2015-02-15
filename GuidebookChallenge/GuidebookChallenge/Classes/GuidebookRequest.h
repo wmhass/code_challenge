@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Guide.h"
+#import "Venue.h"
 
 @protocol GuidebookRequestProtocol <NSObject>
 
