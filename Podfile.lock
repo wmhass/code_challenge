@@ -20,19 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Realm (0.90.5):
-    - Realm/Headers (= 0.90.5)
-  - Realm/Headers (0.90.5)
   - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.1)
-  - Realm
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  Realm: aea25534b97be77995650c2339aa6ed010dfcc8a
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
 
 COCOAPODS: 0.35.0
