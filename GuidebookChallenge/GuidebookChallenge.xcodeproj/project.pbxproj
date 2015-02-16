@@ -9,12 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F3849CE1A909B4600F5D235 /* GuideTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849CD1A909B4600F5D235 /* GuideTableViewCell.m */; };
 		0F3849D11A90A16200F5D235 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3849D01A90A16200F5D235 /* MainNavigationController.m */; };
-		0F3849DC1A910B1200F5D235 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DA1A910B1200F5D235 /* logo@3x.png */; };
-		0F3849DD1A910B1200F5D235 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DB1A910B1200F5D235 /* logo@2x.png */; };
 		0F3849E21A9146EF00F5D235 /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DE1A9146EF00F5D235 /* loading@2x.png */; };
 		0F3849E31A9146EF00F5D235 /* loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849DF1A9146EF00F5D235 /* loading@3x.png */; };
-		0F3849E41A9146EF00F5D235 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849E01A9146EF00F5D235 /* settings@2x.png */; };
-		0F3849E51A9146EF00F5D235 /* settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3849E11A9146EF00F5D235 /* settings@3x.png */; };
 		0F7B451A1A903355007AE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B45191A903355007AE1A6 /* main.m */; };
 		0F7B451D1A903355007AE1A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451C1A903355007AE1A6 /* AppDelegate.m */; };
 		0F7B45201A903355007AE1A6 /* TableDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B451F1A903355007AE1A6 /* TableDataViewController.m */; };
@@ -45,12 +41,8 @@
 		0F3849CD1A909B4600F5D235 /* GuideTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTableViewCell.m; sourceTree = "<group>"; };
 		0F3849CF1A90A16200F5D235 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		0F3849D01A90A16200F5D235 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
-		0F3849DA1A910B1200F5D235 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
-		0F3849DB1A910B1200F5D235 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		0F3849DE1A9146EF00F5D235 /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
 		0F3849DF1A9146EF00F5D235 /* loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@3x.png"; sourceTree = "<group>"; };
-		0F3849E01A9146EF00F5D235 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
-		0F3849E11A9146EF00F5D235 /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
 		0F3849EC1A91584800F5D235 /* libPods-GuidebookChallenge-Realm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-GuidebookChallenge-Realm.a"; path = "../Pods/build/Debug-iphoneos/libPods-GuidebookChallenge-Realm.a"; sourceTree = "<group>"; };
 		0F7B45141A903355007AE1A6 /* GuidebookChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidebookChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7B45181A903355007AE1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,10 +132,6 @@
 				0F7B451C1A903355007AE1A6 /* AppDelegate.m */,
 				0F3849DE1A9146EF00F5D235 /* loading@2x.png */,
 				0F3849DF1A9146EF00F5D235 /* loading@3x.png */,
-				0F3849E01A9146EF00F5D235 /* settings@2x.png */,
-				0F3849E11A9146EF00F5D235 /* settings@3x.png */,
-				0F3849DA1A910B1200F5D235 /* logo@3x.png */,
-				0F3849DB1A910B1200F5D235 /* logo@2x.png */,
 				0F7B45181A903355007AE1A6 /* Info.plist */,
 				0F7B45191A903355007AE1A6 /* main.m */,
 				0F87BA5F1A908ED00054DA30 /* Localizable.strings */,
@@ -296,14 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F87BA601A908ED00054DA30 /* Localizable.strings in Resources */,
-				0F3849E41A9146EF00F5D235 /* settings@2x.png in Resources */,
-				0F3849DD1A910B1200F5D235 /* logo@2x.png in Resources */,
 				0F3849E31A9146EF00F5D235 /* loading@3x.png in Resources */,
 				0F7B45231A903355007AE1A6 /* Main.storyboard in Resources */,
 				0F7B45281A903355007AE1A6 /* LaunchScreen.xib in Resources */,
-				0F3849DC1A910B1200F5D235 /* logo@3x.png in Resources */,
 				0F3849E21A9146EF00F5D235 /* loading@2x.png in Resources */,
-				0F3849E51A9146EF00F5D235 /* settings@3x.png in Resources */,
 				0F7B45251A903355007AE1A6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

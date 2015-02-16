@@ -30,9 +30,8 @@ static NSString *dateFormat = @"M/d/yyyyy";
     [super viewDidLoad];
     
     [self loadData];
-    
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
-    
+
+    self.navigationItem.title = @"Code Challenge";
     self.tableView.tableFooterView = [[UIView alloc] init];
     
 }

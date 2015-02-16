@@ -1,4 +1,4 @@
-# Guidebook Code Challenge - iOS
+# Code Challenge - iOS
 ---
 This project is a simple implementation to solve the iOS Guidebook Code Challenge. 
 
