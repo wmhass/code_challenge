@@ -5,6 +5,7 @@ xcodeproj 'GuidebookChallenge/GuidebookChallenge.xcodeproj/'
 
 target 'GuidebookChallenge' do
     pod 'AFNetworking', '2.5.1'
+    pod 'SVProgressHUD'
 end
 
 target 'GuidebookChallengeTests' do

@@ -26,12 +26,16 @@ static NSString *dateFormat = @"MMM, dd, yyyy";
     if(self) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:dateFormat];
+        [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en"]];
         
         self.endDate = [formatter dateFromString:jsonObject[kEndDate]];
+        self.startDate = [formatter dateFromString:jsonObject[kStartDate]];
+        
+        
+        
         self.icon = [NSURL URLWithString:jsonObject[kIcon]];
         self.name = jsonObject[kName];
         self.objType = jsonObject[kObjType];
-        self.startDate = [formatter dateFromString:jsonObject[kStartDate]];
         self.url = jsonObject[kUrl];
         self.venue = [[Venue alloc] initWithJSONObject:jsonObject[kVenue]];
     }

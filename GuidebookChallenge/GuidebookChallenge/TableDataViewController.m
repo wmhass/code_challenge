@@ -9,6 +9,8 @@
 #import "TableDataViewController.h"
 #import "GuideTableViewCell.h"
 #import "AFNetworking.h"
+#import "SVProgressHUD.h"
+
 @interface TableDataViewController () {
     GuidebookRequest *gbRequest;
 }
@@ -30,9 +32,13 @@ static NSString *dateFormat = @"M/d/yyyyy";
     [self loadData];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
+    
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
 }
 
 - (void)loadData {
+    [SVProgressHUD show];
     [self.navigationItem.leftBarButtonItem setEnabled:NO];
     [gbRequest requestData];
 }
@@ -78,7 +84,6 @@ static NSString *dateFormat = @"M/d/yyyyy";
                                  [self.dateFormatter stringFromDate:g.endDate]];
     
     if(g.imgIcon) {
-        //cell.imageView.image = g.imgIcon;
         cell.imgViewIcon.image = g.imgIcon;
         [cell.loader stopAnimating];
     } else {
@@ -115,7 +120,7 @@ static NSString *dateFormat = @"M/d/yyyyy";
 #pragma mark - GuidebookRequestDelegate
 
 - (void)requestDidFinish:(NSArray *)objects {
-    
+    [SVProgressHUD dismiss];
     [self.navigationItem.leftBarButtonItem setEnabled:YES];
     self.tableData = [objects sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         NSDate *dt1 = [(Guide *)obj1 startDate];
@@ -134,7 +139,7 @@ static NSString *dateFormat = @"M/d/yyyyy";
 }
 
 - (void)requestDidFailWithError:(NSError *)error {
-    
+    [SVProgressHUD dismiss];
     [self.navigationItem.leftBarButtonItem setEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!"
                                                                    message:NSLocalizedString(@"request_error_msg", nil)
