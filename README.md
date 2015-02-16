@@ -1,6 +1,6 @@
 # Code Challenge - iOS
 ---
-This project is a simple implementation to solve the iOS Guidebook Code Challenge. 
+This project is a simple implementation to solve a iOS Code Challenge. 
 
 ## The problem
 ---
