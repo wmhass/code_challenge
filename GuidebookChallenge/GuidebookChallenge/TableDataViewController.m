@@ -10,6 +10,7 @@
 #import "GuideTableViewCell.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "DetailViewController.h"
 
 @interface TableDataViewController () {
     GuidebookRequest *gbRequest;
@@ -19,6 +20,7 @@
 @implementation TableDataViewController
 
 static NSString *dateFormat = @"M/d/yyyyy";
+static NSString *DetailSegueIndetifier = @"cell_detail_segue";
 
 - (void)viewDidLoad {
     gbRequest = [[GuidebookRequest alloc] init];
@@ -33,7 +35,6 @@ static NSString *dateFormat = @"M/d/yyyyy";
 
     self.navigationItem.title = @"Code Challenge";
     self.tableView.tableFooterView = [[UIView alloc] init];
-    
 }
 
 - (void)loadData {
@@ -96,6 +97,12 @@ static NSString *dateFormat = @"M/d/yyyyy";
 
 
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:DetailSegueIndetifier
+                              sender:indexPath];
+}
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -165,4 +172,19 @@ static NSString *dateFormat = @"M/d/yyyyy";
     [self.tableView reloadData];
     [self loadData];
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([sender isKindOfClass:[NSIndexPath class]]) {
+        
+        NSIndexPath *index = sender;
+        Guide *g = self.tableData[index.row];
+        DetailViewController *dt = segue.destinationViewController;
+        
+        dt.URLToOpen = g.url;
+        
+    }
+}
+
 @end
