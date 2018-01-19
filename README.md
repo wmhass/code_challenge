@@ -1,6 +1,6 @@
 # Code Challenge - iOS
 ---
-This project is a simple implementation to solve a iOS Code Challenge. 
+This project is the implementation proposal for a iOS code challenge.
 
 ## The problem
 ---
@@ -13,11 +13,13 @@ This project is a simple implementation to solve a iOS Code Challenge.
 
 ## The solution
 ---
-To solve this challenge, was used `AFNetowrking` library to download the JSON data, and also, to parse the JSON into Object. This library is very popular and very easy to use, with a good learning curve.
+To solve this challenge, `AFNetowrking` library was used to download the JSON data and to to parse the JSON into Object. This is one of the most common network libraries for iOS.
 
-To show the loader while the data is beeing downloaded, the choice was the `SVProgressHUD`, which is a very very easy to use (to a standard loader, you only have to call one method to show, and another one to hide), with a great appearance.
+To show the loader while the data is being downloaded, the choice was the `SVProgressHUD`, which is a very very easy to use (to a standard loader, you only have to call one method to show, and another one to hide), with a great appearance.
 
-To display the data, was used a standard `UITableViewController` with a low level customization (Custom cells and row height). The main screen was inserted inside of a standard `UINavigationController` not only to show a display a `UINavigationBar` and handle a navigation item, but also, to be easy to create a navigation flow in the future (like a item detail view).
+To display the data, a standard `UITableViewController` was used, with a low level customisation (Custom cells and row height only). 
+
+The main screen was inserted inside of a standard `UINavigationController` not only to display a `UINavigationBar` and handle a navigation item, but also, to be easy to create a navigation flow in the future (like an item detail view).
 
 All 3rd party libraries was installed using `cocoapods` as dependency manager.
 
